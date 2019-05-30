@@ -2,8 +2,8 @@
 
 A tiny backup tool that uses mongodump to dump a Mongo database and upload the dump to AWS S3 using the AWS cli.
 
-[![Docker Automated build](https://img.shields.io/docker/automated/dotnetmentor/mongodb-s3-backup.svg?style=for-the-badge)](https://hub.docker.com/r/dotnetmentor/mongodb-s3-backup/)
-[![Docker Build Status](https://img.shields.io/docker/build/dotnetmentor/mongodb-s3-backup.svg?style=for-the-badge)](https://hub.docker.com/r/dotnetmentor/mongodb-s3-backup/)
+[![Docker Automated build](https://img.shields.io/docker/cloud/automated/dotnetmentor/mongodb-s3-backup.svg?style=for-the-badge)](https://hub.docker.com/r/dotnetmentor/mongodb-s3-backup/)
+[![Docker Build Status](https://img.shields.io/docker/cloud/build/dotnetmentor/mongodb-s3-backup.svg?style=for-the-badge)](https://hub.docker.com/r/dotnetmentor/mongodb-s3-backup/)
 [![MicroBadger Size](https://img.shields.io/microbadger/image-size/dotnetmentor/mongodb-s3-backup.svg?style=for-the-badge)](https://hub.docker.com/r/dotnetmentor/mongodb-s3-backup/)
 [![Docker Pulls](https://img.shields.io/docker/pulls/dotnetmentor/mongodb-s3-backup.svg?style=for-the-badge)](https://hub.docker.com/r/dotnetmentor/mongodb-s3-backup/)
 

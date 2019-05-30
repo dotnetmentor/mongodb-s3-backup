@@ -12,6 +12,7 @@ aws s3 cp --recursive "/dump/${MONGODB_DATABASE:?}/" "s3://${AWS_S3_BACKUP_BUCKE
 if [[ "${WEBHOOK_URL}" != "" ]]; then
   echo "Invoking webhook (${WEBHOOK_URL:?})"
   curl --retry 3 "${WEBHOOK_URL:?}"
+  echo
 fi
 
 echo "Backup completed"
