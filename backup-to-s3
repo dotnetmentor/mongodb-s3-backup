@@ -9,4 +9,9 @@ mongodump --host "${MONGODB_HOST:?}" --ssl --username "${MONGODB_USERNAME:?}" --
 echo "Uploading database dump to S3"
 aws s3 cp --recursive "/dump/${MONGODB_DATABASE:?}/" "s3://${AWS_S3_BACKUP_BUCKET:?}/${AWS_S3_BACKUP_PREFIX}${BACKUP_NAME:?}"
 
+if [[ "${WEBHOOK_URL}" != "" ]]; then
+  echo "Invoking webhook (${WEBHOOK_URL:?})"
+  curl --retry 3 "${WEBHOOK_URL:?}"
+fi
+
 echo "Backup completed"

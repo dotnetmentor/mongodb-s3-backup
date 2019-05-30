@@ -12,12 +12,13 @@ A tiny backup tool that uses mongodump to dump a Mongo database and upload the d
 
 ## Configuration
 
-| Environment variable | Description                             | Default |
-|----------------------|-----------------------------------------|---------|
-| MONGODB_AUTH_DB      | The name of the authentication database | admin   |
-| MONGODB_DATABASE     | The name of the database to dump        | -       |
-| MONGODB_HOST         | The mongo db host to connect to         | -       |
-| MONGODB_USERNAME     | The username for mongo db               | -       |
-| MONGODB_PASSWORD     | The password for mongo db               | -       |
-| AWS_S3_BACKUP_BUCKET | The AWS S3 backup bucket name           | -       |
-| AWS_S3_BACKUP_PREFIX | The prefix to use for the backup        | -       |
+| Environment variable | Description                                          | Default |
+|----------------------|------------------------------------------------------|---------|
+| MONGODB_AUTH_DB      | The name of the authentication database              | admin   |
+| MONGODB_DATABASE     | The name of the database to dump                     | -       |
+| MONGODB_HOST         | The mongo db host to connect to                      | -       |
+| MONGODB_USERNAME     | The username for mongo db                            | -       |
+| MONGODB_PASSWORD     | The password for mongo db                            | -       |
+| AWS_S3_BACKUP_BUCKET | The AWS S3 backup bucket name                        | -       |
+| AWS_S3_BACKUP_PREFIX | The prefix to use for the backup                     | -       |
+| WEBHOOK_URL          | When specified, the URL will be called on completion | -       |
