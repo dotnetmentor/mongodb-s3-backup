@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+MONGODB_AUTH_DB=${MONGODB_AUTH_DB:-admin}
+BACKUP_NAME="${MONGODB_DATABASE:?}-$(date +%Y%m%d-%H%M)"
+
+echo "Dumping database ${MONGODB_DATABASE:?} using mongodump"
+mongodump --host "${MONGODB_HOST:?}" --ssl --username "${MONGODB_USERNAME:?}" --password "${MONGODB_PASSWORD:?}" --authenticationDatabase "${MONGODB_AUTH_DB}" --db "${MONGODB_DATABASE:?}"
+
+echo "Uploading database dump to S3"
+aws s3 cp --recursive "/dump/${MONGODB_DATABASE:?}/" "s3://${AWS_S3_BACKUP_BUCKET:?}/${AWS_S3_BACKUP_PREFIX}${BACKUP_NAME:?}"
+
+echo "Backup completed"
