@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 MONGODB_AUTH_DB=${MONGODB_AUTH_DB:-admin}
 BACKUP_NAME="${MONGODB_DATABASE:?}-$(date +%Y%m%d-%H%M)"
 
