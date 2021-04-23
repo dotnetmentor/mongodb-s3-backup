@@ -4,7 +4,8 @@ set -e
 
 DEBUG=${DEBUG:-false}
 MONGODB_AUTH_DB=${MONGODB_AUTH_DB:-admin}
-BACKUP_NAME="${MONGODB_DATABASE:?}-$(date +%Y%m%d-%H%M)"
+BACKUP_DATE_FORMAT="${BACKUP_DATE_FORMAT:-+%Y%m%d-%H%M}"
+BACKUP_NAME="${MONGODB_DATABASE:?}-$(date "${BACKUP_DATE_FORMAT:?}")"
 
 declare aws_s3_extra_args=''
 
