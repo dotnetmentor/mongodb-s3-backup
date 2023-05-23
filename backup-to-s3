@@ -14,7 +14,7 @@ if [[ "${DEBUG}" == 'true' ]]; then
 fi
 
 echo "Dumping database ${MONGODB_DATABASE:?} using mongodump"
-mongodump --host "${MONGODB_HOST:?}" --ssl --username "${MONGODB_USERNAME:?}" --password "${MONGODB_PASSWORD:?}" --authenticationDatabase "${MONGODB_AUTH_DB}" --db "${MONGODB_DATABASE:?}"
+mongodump --ssl --username "${MONGODB_USERNAME:?}" --password "${MONGODB_PASSWORD:?}" --authenticationDatabase "${MONGODB_AUTH_DB}" --db "${MONGODB_DATABASE:?}" "${MONGODB_CONNECTION:?}"
 
 sleep 5
 
