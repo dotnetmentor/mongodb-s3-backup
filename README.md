@@ -19,6 +19,7 @@ A tiny backup tool that uses mongodump to dump a Mongo database and upload the d
 | MONGODB_PASSWORD     | The password for mongo db                                   | -            |
 | AWS_S3_BACKUP_BUCKET | The AWS S3 backup bucket name                               | -            |
 | AWS_S3_BACKUP_PREFIX | The prefix to use for the backup                            | -            |
+| AWS_S3_STORAGE_CLASS | The storage class to use                                    | STANDARD     |
 | BACKUP_DATE_FORMAT   | The date format used for suffixing backups with a timestamp | +%Y%m%d-%H%M |
 | WEBHOOK_URL          | When specified, the URL will be called on completion        | -            |
 
